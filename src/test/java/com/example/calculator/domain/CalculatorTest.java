@@ -38,4 +38,10 @@ class CalculatorTest {
         int quotient = Calculator.divide(a,b);
         assertEquals(2/3, quotient);
     }
+
+    @Test
+    void shouldThrowExceptionWhenDividedByZero(){
+        int zero = 0;
+        assertThrows(ArithmeticException.class, () -> Calculator.divide(a, zero) );
+    }
 }
