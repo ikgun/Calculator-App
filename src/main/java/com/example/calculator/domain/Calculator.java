@@ -29,7 +29,7 @@ public class Calculator {
         throw new UnsupportedOperationException("Implement this method");
     }
 
-    private int divide(int a, int b){
+    public static int divide(int a, int b){
         throw new UnsupportedOperationException("Implement this method");
     }
 

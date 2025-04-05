@@ -32,4 +32,10 @@ class CalculatorTest {
         int product = Calculator.multiply(a,b);
         assertEquals(6, product);
     }
+
+    @Test
+    void shouldDivideCorrectly(){
+        int quotient = Calculator.divide(a,b);
+        assertEquals(2/3, quotient);
+    }
 }
