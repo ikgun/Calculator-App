@@ -10,38 +10,45 @@ class CalculatorTest {
     int b;
 
     @BeforeEach
-    void setup(){
+    void setup() {
         a = 2;
         b = 3;
     }
 
     @Test
-    void shouldAddCorrectly(){
-        int sum = Calculator.add(a,b);
+    void shouldAddCorrectly() {
+        int sum = Calculator.add(a, b);
         assertEquals(5, sum);
     }
 
     @Test
-    void shouldSubtractCorrectly(){
-        int difference = Calculator.subtract(a,b);
+    void shouldSubtractCorrectly() {
+        int difference = Calculator.subtract(a, b);
         assertEquals(-1, difference);
     }
 
     @Test
-    void shouldMultiplyCorrectly(){
-        int product = Calculator.multiply(a,b);
+    void shouldMultiplyCorrectly() {
+        int product = Calculator.multiply(a, b);
         assertEquals(6, product);
     }
 
     @Test
-    void shouldDivideCorrectly(){
-        int quotient = Calculator.divide(a,b);
-        assertEquals(2/3, quotient);
+    void shouldDivideCorrectly() {
+        int quotient = Calculator.divide(a, b);
+        assertEquals(2 / 3, quotient);
     }
 
     @Test
-    void shouldThrowExceptionWhenDividedByZero(){
+    void shouldThrowExceptionWhenDividedByZero() {
         int zero = 0;
-        assertThrows(ArithmeticException.class, () -> Calculator.divide(a, zero) );
+        assertThrows(ArithmeticException.class, () -> Calculator.divide(a, zero));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenGivenIllegalArgument(){
+        String string = "hello";
+        Calculator calculator = new Calculator();
+        assertThrows(IllegalArgumentException.class, () -> calculator.validateUserInput(string));
     }
 }

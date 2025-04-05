@@ -13,7 +13,7 @@ public class Calculator {
 
     }
 
-    private int validateUserInput(String input){
+    public int validateUserInput(String input){
         throw new UnsupportedOperationException("Implement this method");
     }
 
