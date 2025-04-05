@@ -1,6 +1,47 @@
 package com.example.calculator.domain;
 
+import java.util.Scanner;
+
 public class Calculator {
 
-    public void run(){}
+    public void run(){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private int askUserInput(Scanner scanner){
+        throw new UnsupportedOperationException("Implement this method");
+
+    }
+
+    private int validateUserInput(String input){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private int add(int a, int b){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private int subtract(int a, int b){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private int multiply(int a, int b){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private int divide(int a, int b){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private String readFile(){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+    private void writeFile(String input){
+        throw new UnsupportedOperationException("Implement this method");
+    }
+
+
+
+
 }
