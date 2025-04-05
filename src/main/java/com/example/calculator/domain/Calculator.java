@@ -21,7 +21,7 @@ public class Calculator {
         throw new UnsupportedOperationException("Implement this method");
     }
 
-    private int subtract(int a, int b){
+    public static int subtract(int a, int b){
         throw new UnsupportedOperationException("Implement this method");
     }
 

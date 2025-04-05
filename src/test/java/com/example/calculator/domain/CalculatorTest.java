@@ -14,4 +14,11 @@ class CalculatorTest {
         assertEquals(5, sum);
     }
 
+    @Test
+    void shouldSubtractCorrectly(){
+        int a = 2;
+        int b = 3;
+        int difference = Calculator.subtract(a,b);
+        assertEquals(-1, difference);
+    }
 }
