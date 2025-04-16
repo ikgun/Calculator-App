@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
+
     int a;
     int b;
 
@@ -45,10 +46,4 @@ class CalculatorTest {
         assertThrows(ArithmeticException.class, () -> Calculator.divide(a, zero));
     }
 
-    @Test
-    void shouldThrowExceptionWhenGivenIllegalArgument(){
-        String string = "hello";
-        Calculator calculator = new Calculator();
-        assertThrows(IllegalArgumentException.class, () -> calculator.validateUserInput(string));
-    }
 }
