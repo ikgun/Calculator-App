@@ -13,6 +13,30 @@ public class TaskManager {
     public TaskManager() throws IOException, URISyntaxException {
     }
 
+    public int getSelectedOperation() {
+        int selectedOp;
+        selectedOp = ioManager.getNumber();
+
+        while (selectedOp < 1 || selectedOp > 5) {
+            System.out.println("Please enter a valid menu option between 1 and 5!");
+            selectedOp = ioManager.getNumber();
+        }
+        return selectedOp;
+    }
+
+    public boolean continueApp(int selectedOp) throws IOException {
+        boolean continueApp = true;
+        switch (selectedOp) {
+            case 1 -> doOperation();
+            case 2 -> ioManager.printOperationsHistory();
+            case 3 -> ioManager.deleteOperationFromHistory();
+            case 4 -> ioManager.deleteAllHistory();
+            case 5 -> continueApp = quitApp();
+            default -> throw new IllegalArgumentException("Please enter a correct menu option!");
+        }
+        return continueApp;
+    }
+
     public boolean quitApp() throws IOException {
         ioManager.deleteAllHistory();
         System.out.println("Thanks for using the Calculator app, see you next time!");

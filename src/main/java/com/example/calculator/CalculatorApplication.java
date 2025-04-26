@@ -12,7 +12,8 @@ public class CalculatorApplication {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         SpringApplication.run(CalculatorApplication.class, args);
-        CalculatorRunner.run();
+        CalculatorRunner calculatorRunner = new CalculatorRunner();
+        calculatorRunner.run();
     }
 
 }
